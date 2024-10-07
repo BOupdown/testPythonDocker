@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app  # This mounts the local app directory to /app in the container
+    environment:
+      - PYTHONUNBUFFERED=1
